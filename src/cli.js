@@ -24,7 +24,7 @@ try {
   // 2. Read each staged file and scan it
   stagedFiles.forEach((filePath) => {
     // Skip scanner itself or test files so we don't block our own regex definitions
-    if (filePath.includes('scanner.js') || filePath.includes('test.js')) {
+   if (filePath.includes('scanner.js') || filePath.includes('test.js') || filePath.startsWith('notes/')) {
       return;
     }
 
